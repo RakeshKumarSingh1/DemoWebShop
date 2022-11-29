@@ -98,9 +98,8 @@ def step_impl(context):
     context.driver.find_element("xpath","//input[@value='Log in']").click()
     time.sleep(2)
 
-
 @then(u'Click on Logout Button')
 def step_impl(context):
-    context.driver.find_element("xpath", "//input[@value='Log in']").click()
+    context.driver.find_element("xpath", "//a[text()='Log out']").click()
     context.driver.close()
 
